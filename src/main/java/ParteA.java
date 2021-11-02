@@ -25,7 +25,7 @@ public class ParteA {
         int opcion;
         int n;
         int eleccion;
-        boolean pares;
+        boolean pares = false;
 
         // Uso el do while para crear programa del juego  
         do {
@@ -44,7 +44,7 @@ public class ParteA {
                         eleccion = datos.nextInt();
                         // Usamos swicht para la elección
                         switch (eleccion) {
-                           
+
                             case 1:
                                 System.out.println("Has elegido Pares");
                                 pares = true;
@@ -73,6 +73,25 @@ public class ParteA {
                     } while (numeroDedosUsuario2 <= 0 || numeroDedosUsuario2 >= 10);
 
                     int resultado = numeroDedosUsuario1 + numeroDedosUsuario2;
+                    //comprobamos si el resultado es pares o nones y con obtenemos el ganador.
+                    //si gana pares
+                    if (resultado % 2 == 0) {
+                        if (pares == true) {
+                            System.out.println("Gana el  jugador 1");
+                        } else {
+                            System.out.println("Gana el jugador 2");
+                            // si gana impares
+                        }
+                    } else {
+                        if (pares != true) {
+                            System.out.println("Gana el juegador 1");
+
+                        } else {
+                            System.out.println("Gana el jugador 2");
+
+                        }
+
+                    }
 
                     break;
                 case 2:
