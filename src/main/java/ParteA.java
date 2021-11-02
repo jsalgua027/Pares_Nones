@@ -10,6 +10,7 @@ import java.util.Scanner;
 /**
  *
  * @author nacho
+ * https://github.com/jsalgua027/Pares_Nones.git
  */
 public class ParteA {
 
@@ -36,14 +37,20 @@ public class ParteA {
 
             switch (opcion) {
                 case 1:
-                    //En el case 1 Usuario1 vs Usuario2 genero bolques de do while por usuario.
-                    do{ 
+                    //En el case 1 Usuario1 vs Usuario2 genero bloques de do while por usuario.
+                    do {
                         System.out.println("Jugador1 introduce numero de dedos ");
-                        numeroDedosUsuario1=datos.nextInt();
-                        
-                    }
-                        
-                   
+                        numeroDedosUsuario1 = datos.nextInt();
+
+                    }while(numeroDedosUsuario1<=0 || numeroDedosUsuario1>=10);
+                    do {
+                        System.out.println("Jugador2 introduce numero de dedos ");
+                        numeroDedosUsuario2 = datos.nextInt();
+
+                    } while (numeroDedosUsuario2 <= 0 || numeroDedosUsuario2 >= 10);
+
+                    int resultado = numeroDedosUsuario1 + numeroDedosUsuario2;
+      
                     
                     break;
                 case 2:
