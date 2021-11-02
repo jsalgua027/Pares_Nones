@@ -6,11 +6,9 @@ import java.util.Scanner;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-
 /**
  *
- * @author nacho
- * https://github.com/jsalgua027/Pares_Nones.git
+ * @author nacho https://github.com/jsalgua027/Pares_Nones.git
  */
 public class ParteA {
 
@@ -19,8 +17,8 @@ public class ParteA {
      */
     public static void main(String[] args) {
         //Activo la clase Escaner y la clase Random
-        Scanner datos=new Scanner (System.in);
-        Random numAleatorio= new Random();
+        Scanner datos = new Scanner(System.in);
+        Random numAleatorio = new Random();
         //Inicializo las variables
         int numeroDedosUsuario1;
         int numeroDedosUsuario2;
@@ -28,32 +26,46 @@ public class ParteA {
         int n;
         int eleccion;
         boolean pares;
-       
+
         // Uso el do while para crear programa del juego  
         do {
             System.out.println("1 Usuario1 VS Usuario2 ");
             System.out.println("2 Yo VS Maquina");
             System.out.println("3 Para terminar");
 
-            opcion=datos.nextInt();
-            
+            opcion = datos.nextInt();
 
             switch (opcion) {
                 case 1:
-                      //Tenemos el resultado vamos a elejir pares o nones 
+                    //Tenemos el resultado vamos a elejir pares o nones 
                     do {
-                        System.out.println("1.Elije si Par");
-                        System.out.println("2.Elije es Nones");
+                        System.out.println("1.Elegir si Par");
+                        System.out.println("2.Elegir es Nones");
                         eleccion = datos.nextInt();
+                        // Usamos swicht para la elección
+                        switch (eleccion) {
+                           
+                            case 1:
+                                System.out.println("Has elegido Pares");
+                                pares = true;
+                                break;
+                            case 2:
+                                System.out.println("Has elegido Nones");
+                                pares = false;
+                                break;
+                            default:
+                                System.out.println("Indica la opción correcta");
+
+                        }
 
                     } while (eleccion > 2 || eleccion > 1);
-                    
+
                     //En el case 1 Usuario1 vs Usuario2 genero bloques de do while por usuario.
                     do {
                         System.out.println("Jugador1 introduce numero de dedos ");
                         numeroDedosUsuario1 = datos.nextInt();
 
-                    }while(numeroDedosUsuario1<=0 || numeroDedosUsuario1>=10);
+                    } while (numeroDedosUsuario1 <= 0 || numeroDedosUsuario1 >= 10);
                     do {
                         System.out.println("Jugador2 introduce numero de dedos ");
                         numeroDedosUsuario2 = datos.nextInt();
@@ -61,23 +73,22 @@ public class ParteA {
                     } while (numeroDedosUsuario2 <= 0 || numeroDedosUsuario2 >= 10);
 
                     int resultado = numeroDedosUsuario1 + numeroDedosUsuario2;
-      
-                    
+
                     break;
                 case 2:
-                    
+
                     break;
-                
+
                 case 3:
-                    
+
                     break;
-               
+
                 default:
                     System.out.println("te has equivocado");
 
             }
         } while (opcion != 3);
-         
+
     }
-    
+
 }
