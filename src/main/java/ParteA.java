@@ -94,7 +94,60 @@ public class ParteA {
                     }
 
                     break;
+
                 case 2:
+                    //Tenemos el resultado vamos a elejir pares o nones 
+                    do {
+                        System.out.println("1.Elegir si Par");
+                        System.out.println("2.Elegir es Nones");
+                        eleccion = datos.nextInt();
+                        // Usamos swicht para la elección
+                        switch (eleccion) {
+
+                            case 1:
+                                System.out.println("Has elegido Pares");
+                                pares = true;
+                                break;
+                            case 2:
+                                System.out.println("Has elegido Nones");
+                                pares = false;
+                                break;
+                            default:
+                                System.out.println("Indica la opción correcta");
+
+                        }
+
+                    } while (eleccion > 2 || eleccion > 1);
+
+                    //En el case 1 Usuario1 vs Usuario2 genero bloques de do while por usuario.
+                    do {
+                        System.out.println("Jugador1 introduce numero de dedos ");
+                        numeroDedosUsuario1 = datos.nextInt();
+
+                    } while (numeroDedosUsuario1 <= 0 || numeroDedosUsuario1 >= 10);
+
+                    int numRadom = numAleatorio.nextInt(11);
+
+                    int resultadoVsMaquina = numeroDedosUsuario1 + numRadom;
+                    //comprobamos si el resultado es pares o nones y con obtenemos el ganador.
+                    //si gana pares
+                    if (resultadoVsMaquina % 2 == 0) {
+                        if (pares == true) {
+                            System.out.println("Gana el  jugador 1");
+                        } else {
+                            System.out.println("Gana el jugador 2");
+                            // si gana impares
+                        }
+                    } else {
+                        if (pares != true) {
+                            System.out.println("Gana el juegador 1");
+
+                        } else {
+                            System.out.println("Gana el jugador 2");
+
+                        }
+
+                    }
 
                     break;
 
