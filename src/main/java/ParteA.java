@@ -119,31 +119,33 @@ public class ParteA {
 
                     } while (eleccion > 2 || eleccion > 1);
 
-                    //En el case 1 Usuario1 vs Usuario2 genero bloques de do while por usuario.
+                    //En el case  Usuario vs Maquina genero bloques de do while.
                     do {
-                        System.out.println("Jugador1 introduce numero de dedos ");
+                        System.out.println("Jugador introduce numero de dedos ");
                         numeroDedosUsuario1 = datos.nextInt();
-
+                        //condiciono que el número sea el correcto
                     } while (numeroDedosUsuario1 <= 0 || numeroDedosUsuario1 >= 10);
-
+                    //genero un numero aleatorio en 0 y 10 para la maquina
                     int numRadom = numAleatorio.nextInt(11);
-
+                    System.out.println("la maquina ha elegido " + numRadom);
                     int resultadoVsMaquina = numeroDedosUsuario1 + numRadom;
-                    //comprobamos si el resultado es pares o nones y con obtenemos el ganador.
+                    System.out.println("Resultado Vs Maquina" + resultadoVsMaquina);
+                    //comprobamos si el resultado es pares o nones y  obtenemos el ganador.
                     //si gana pares
                     if (resultadoVsMaquina % 2 == 0) {
+
                         if (pares == true) {
-                            System.out.println("Gana el  jugador 1");
+                            System.out.println("Gana el  jugador ");
                         } else {
-                            System.out.println("Gana el jugador 2");
+                            System.out.println("Gana la maquina");
                             // si gana impares
                         }
                     } else {
                         if (pares != true) {
-                            System.out.println("Gana el juegador 1");
+                            System.out.println("Gana el juegador ");
 
                         } else {
-                            System.out.println("Gana el jugador 2");
+                            System.out.println("Gana la maquina");
 
                         }
 
@@ -154,7 +156,7 @@ public class ParteA {
                 case 3:
 
                     break;
-
+                //por si el usuario se equivoca en el menu 
                 default:
                     System.out.println("te has equivocado");
 
