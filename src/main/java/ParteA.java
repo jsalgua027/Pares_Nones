@@ -26,6 +26,9 @@ public class ParteA {
         int numeroDedosUsuario2;
         int opcion;
         int n;
+        int eleccion;
+        boolean pares;
+       
         // Uso el do while para crear programa del juego  
         do {
             System.out.println("1 Usuario1 VS Usuario2 ");
@@ -37,6 +40,14 @@ public class ParteA {
 
             switch (opcion) {
                 case 1:
+                      //Tenemos el resultado vamos a elejir pares o nones 
+                    do {
+                        System.out.println("1.Elije si Par");
+                        System.out.println("2.Elije es Nones");
+                        eleccion = datos.nextInt();
+
+                    } while (eleccion > 2 || eleccion > 1);
+                    
                     //En el case 1 Usuario1 vs Usuario2 genero bloques de do while por usuario.
                     do {
                         System.out.println("Jugador1 introduce numero de dedos ");
