@@ -17,13 +17,15 @@ public class ParteA {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Activo la clase Escaner y la clase Random
         Scanner datos=new Scanner (System.in);
         Random numAleatorio= new Random();
-        
-        int dedosUsuario1;
-        int dedosusuario2;
+        //Inicializo las variables
+        int numeroDedosUsuario1;
+        int numeroDedosUsuario2;
         int opcion;
-        
+        int n;
+        // Uso el do while para crear programa del juego  
         do {
             System.out.println("1 Usuario1 VS Usuario2 ");
             System.out.println("2 Yo VS Maquina");
@@ -34,6 +36,14 @@ public class ParteA {
 
             switch (opcion) {
                 case 1:
+                    //En el case 1 Usuario1 vs Usuario2 genero bolques de do while por usuario.
+                    do{ 
+                        System.out.println("Jugador1 introduce numero de dedos ");
+                        numeroDedosUsuario1=datos.nextInt();
+                        
+                    }
+                        
+                   
                     
                     break;
                 case 2:
